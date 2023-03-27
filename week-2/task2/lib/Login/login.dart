@@ -22,13 +22,6 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Login",
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold),
-              ),
               const SizedBox(
                 height: 15,
               ),
@@ -72,7 +65,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: const Text(
-                    "Continue",
+                    "Login",
                     style: TextStyle(fontSize: 26),
                   )),
             ],
