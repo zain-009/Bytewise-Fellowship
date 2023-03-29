@@ -1,4 +1,5 @@
 In Week 2:
 -I set up the flutter environment on my computer and setup android studio with a virtual device.
+-I also learned to use a physical device rather than a virtual device to run flutter app.
 -I learned dart programming language and coded using dart.
 -I made my first flutter app which navigates from one screen to another using navigator.push().
