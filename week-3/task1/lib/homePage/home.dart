@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            
+            Text("data"),
           ],
         ),
       ),
