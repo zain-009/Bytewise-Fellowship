@@ -19,7 +19,6 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -48,7 +47,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 150,
                       width: 150,
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       decoration: const BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.only(
@@ -64,7 +63,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 120,
                       width: 150,
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       decoration: const BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.only(
@@ -80,7 +79,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 90,
                       width: 150,
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       decoration: const BoxDecoration(
                           color: Colors.green,
                           borderRadius: BorderRadius.only(
@@ -96,7 +95,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       height: 60,
                       width: 150,
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       decoration: const BoxDecoration(
                           color: Colors.cyan,
                           borderRadius: BorderRadius.only(
@@ -126,7 +125,7 @@ class HomePage extends StatelessWidget {
                   child: Container(
                     height: 50,
                     width: 100,
-                    padding: EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.blue,

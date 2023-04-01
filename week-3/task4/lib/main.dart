@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 10,),
             Container(
-              height: 160,
+              height: 130,
               width: 400,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Text(
-                "@override is used to overwrite the build function defined by the class's ancestor (stateless Widget)",
+                "@override is used to overwrite the build function defined by the class's ancestor",
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
