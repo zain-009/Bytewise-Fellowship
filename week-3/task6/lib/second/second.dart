@@ -1,7 +1,30 @@
 import 'package:flutter/material.dart';
 class Second extends StatelessWidget {
   const Second({Key? key}) : super(key: key);
+  final List<Image> myImages = const [
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
+    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fitWidth,),
 
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,30 +33,14 @@ class Second extends StatelessWidget {
         centerTitle: true,
         title: const Text("Flutter UI Layout"),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            ListView.builder(
-              itemCount: 30,
-              itemBuilder: (context , index){
-                return const ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.brown,
-                    //radius: 60,
-                    child: CircleAvatar(
-                      radius: 55,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/118763595?v=4'),
-                    ),
-                  ),
-                  title: Text("Zain Ali"),
-                  subtitle: Text("Hello!"),
-                  trailing: Text("5:20 AM"),
-                );
-              },
-            ),
-          ],
-        ),
+      body: GridView.count(
+        scrollDirection: Axis.vertical,
+        crossAxisSpacing: 1,
+        mainAxisSpacing: 1,
+        crossAxisCount: 3,
+      children: [
+        ...myImages,
+      ],
       ),
     );
   }

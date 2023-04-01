@@ -16,17 +16,7 @@ class MyApp extends StatelessWidget {
 }
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-  final List<Image> myImages = const [
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-    Image(image: AssetImage('assets/black.jpg'),fit: BoxFit.fill,),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,6 +118,28 @@ class Home extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Second()),);
                   }, child: const Text("Next Page")),
               const SizedBox(height: 10,),
+              ListView(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  Container(
+                    height: 100,
+                    color: Colors.cyan,
+                  ),
+                  Container(
+                    height: 100,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    height: 100,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    height: 100,
+                    color: Colors.brown,
+                  ),
+                ],
+              )
               // GridView.builder(
               //   shrinkWrap: true,
               // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
