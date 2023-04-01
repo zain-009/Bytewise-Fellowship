@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Text(
-                "@override is used to overwrite the build function defined by the class's ancestor",
+                "@override is used to overwrite the build function defined by the class's ancestor.",
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
