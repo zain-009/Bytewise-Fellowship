@@ -131,7 +131,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.blue,
                     ),
                     child: const Text(
-                      "Click Me!",
+                      "Click Me",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 20,
