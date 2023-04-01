@@ -1,0 +1,8 @@
+In week 3 I learned:
+1- Using Widgets like column, row, Container, Stack, buttons, Navigating to other screens.
+2- Container, Stack, Expanded, Circle Avatar, Divider, Rich Text, TextFormField, List tile and listView.builder Widgets.
+3- Scaffold, appBar and bottomNavigationBar.
+4- Stateless Widgets and Hot Reload.
+5- Statefull Widgets (Like and follow Counter App).
+6- Card, ListView, Gridview.
+7- Layout basics (SingleChildScrollView), Rows, Expanded.
