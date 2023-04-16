@@ -17,9 +17,10 @@ class _SecondScreenState extends State<SecondScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TapBoxA(),
-              TapboxB(onChanged: (bool value) { 1; },),
+              const TapBoxA(),
+              TapBoxB(onChanged: (bool value) {  },),
             ],
           )
           
@@ -35,10 +36,9 @@ class TapBoxA extends StatefulWidget {
   @override
   State<TapBoxA> createState() => _TapBoxAState();
 }
-
 class _TapBoxAState extends State<TapBoxA> {
-  bool _active = false;
-  void _handleTap(){
+  bool _active = true;
+  void _handletap(){
     setState(() {
       _active = !_active;
     });
@@ -46,79 +46,68 @@ class _TapBoxAState extends State<TapBoxA> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: _handleTap,
+      onTap: _handletap,
       child: Container(
-        height: 200,
-        width: 200,
         decoration: BoxDecoration(
-          color: _active ? Colors.teal : Colors.black,
+          color: _active ? Colors.green : Colors.grey,
         ),
-        child: Center(
-          child: Text(_active? 'Active' : 'InActive'
-          ,style: TextStyle(fontSize: 32.0, color: Colors.white),
-          ),
-        ),
+        height: 150,
+        width: 150,
+        child: Center(child: Text(_active ? 'Active' : 'InActive', style: const TextStyle(fontSize: 20),)),
       ),
-
     );
   }
 }
+
 class ParentWidget extends StatefulWidget {
   const ParentWidget({Key? key}) : super(key: key);
 
   @override
   State<ParentWidget> createState() => _ParentWidgetState();
 }
-
 class _ParentWidgetState extends State<ParentWidget> {
-  bool _active = false;
-  void _handleTapboxChanged(bool newValue) {
+  bool _isActive = true;
+
+  void _tapboxChanged(bool newValue) {
     setState(() {
-      _active = newValue;
+      _isActive = newValue;
     });
   }
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: TapboxB(
-        active: _active,
-        onChanged: _handleTapboxChanged,
+      child: TapBoxB(
+          active : _isActive,
+          onChanged: _tapboxChanged,
       ),
     );
   }
 }
-class TapboxB extends StatelessWidget {
-  const TapboxB({
+
+class TapBoxB extends StatelessWidget {
+  const TapBoxB({
     super.key,
     this.active = false,
     required this.onChanged,
-  });
+    });
+    final bool active;
+    final ValueChanged<bool> onChanged;
 
-  final bool active;
-  final ValueChanged<bool> onChanged;
-
-  void _handleTap() {
-    onChanged(!active);
-  }
-
+    void _handleTap(){
+      onChanged(!active);
+    }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _handleTap,
       child: Container(
-        width: 200,
-        height: 200,
         decoration: BoxDecoration(
-          color: active ? Colors.teal : Colors.black,
+          color: active ? Colors.green : Colors.grey,
         ),
-        child: Center(
-          child: Text(
-            active ? 'Active' : 'Inactive',
-            style: const TextStyle(fontSize: 32.0, color: Colors.white),
-          ),
-        ),
+        height: 150,
+        width: 150,
+        child: Center(child: Text(active ? 'Active' : 'InActive',style: const TextStyle(fontSize: 20),)),
       ),
     );
   }
 }
-

@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
-                  children: [
+                  children: const [
                     Text(
                       "The Monal",
                       style:
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(1),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                     Icon(
                       Icons.call,
                       color: Colors.blue,
-                      size: 35,
+                      size: 30,
                     ),
                     Text(
                       "Call",
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                     Icon(
                       Icons.double_arrow,
                       color: Colors.blue,
-                      size: 35,
+                      size: 30,
                     ),
                     Text(
                       "Route",
@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                     Icon(
                       Icons.share,
                       color: Colors.blue,
-                      size: 35,
+                      size: 30,
                     ),
                     Text(
                       "Share",
@@ -110,13 +110,12 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(22),
             child: Container(
-              child: Text(
+              child: const Text(
                 "The Monal Restaurant Pir Sohawa situated at the Margallah hills offers indoor & outdoor dining with an extensive view of the Capital. Monal Islamabad is a perfect blend of traditional & contemporary cuisine. It offers a vitalizing experience in fine-dining that attracts locals and tourists alike. Monal Islamabad is the flagship restaurant of The Monal Group of Companies. Since 2006, Monal Islamabad is serving its guests with the best fine dining experiences.",
                 style: TextStyle(fontSize: 16),
               ),
             ),
           ),
-          SizedBox(height: 50,),
           IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()));}, icon: Icon(Icons.arrow_forward_rounded))
         ],
       ),
@@ -125,7 +124,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class FavouriteWidget extends StatefulWidget {
-  const FavouriteWidget({Key? key}) : super(key: key);
+  const FavouriteWidget({Key? key,}) : super(key: key);
 
   @override
   State<FavouriteWidget> createState() => _FavouriteWidgetState();
