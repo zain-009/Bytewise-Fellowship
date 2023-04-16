@@ -1,0 +1,4 @@
+In Week 4 I learned:
+- Making my app Interactive by Managing state of a Widget by itself, by a parent widget or both using SetState().
+- Adding Images and Assets to my app. Using Assetimage and NetworkImage.
+- Navigating to other Screens using Navigator.push and Named Routes.
