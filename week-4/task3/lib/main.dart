@@ -32,7 +32,7 @@ class FirstScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ElevatedButton(onPressed: (){Navigator.pushNamed(context, '2');}, child: Text("Navigate Using Named Route")),
+            ElevatedButton(onPressed: (){Navigator.pushNamed(context, '2');}, child: Text("Navigate Using Named-Route")),
             ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdScreen()));}, child: Text("Navigate Using Navigator")),
           ],
         ),
