@@ -1,0 +1,10 @@
+In this week I learned:
+=Animations:
+-Implicit animations: 
+                   we use them if our animation does not repeat. For this we have animated types of widgets like Animated Container, etc.
+
+-Tween Builder Animations: 
+     			If we dont find a desired animated widget we can make our own custom animated widget using the tween animation Builder.
+
+-Explicit Animation:
+			If our animation needs more control then we opt for explicit animations which use an animation controller.
