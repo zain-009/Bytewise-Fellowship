@@ -1,4 +1,18 @@
 In this week I learned:
 Advanced UI which includes:
--SliverAppBar
--
+  =Slivers:
+	-SliverAppBar
+	-SliverList
+	-SliverGrid
+
+  =Gestures:
+	-Swipe Gestures
+	-Taps(Single, Double, LongPress)
+
+  =Focus:
+	-FocusNode
+
+  =Fonts:
+	-Google fonts:
+	-Using packages
+	-Using font Asset

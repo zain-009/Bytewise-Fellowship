@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'first.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,11 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Home(),
     );
   }
 }
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -22,54 +25,72 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
-        leading: const Icon(Icons.arrow_back_ios,color: Colors.pink,),
+        backgroundColor: Colors.pink,
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Colors.white,
+        ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            Text("Food Delivery",style: TextStyle(color: Colors.black),),
-            Text("HOME",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.black),),
+            Text(
+              "Food Delivery",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+            Text(
+              "HOME",
+              style: TextStyle(fontSize: 12, color: Colors.white),
+            ),
           ],
         ),
         actions: const [
-          Icon(Icons.favorite_border,color: Colors.pink,size: 28,),
-          SizedBox(width: 10,),
-          Icon(Icons.shopping_basket_outlined,color: Colors.pink,size: 28,),
-          SizedBox(width: 10,),
+          Icon(
+            Icons.favorite_border,
+            color: Colors.white,
+            size: 28,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Icon(
+            Icons.shopping_basket_outlined,
+            color: Colors.white,
+            size: 28,
+          ),
+          SizedBox(
+            width: 10,
+          ),
         ],
       ),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            //Foodpanda UI Search bar Sliver
             floating: true,
             pinned: false,
-            backgroundColor: Colors.white,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 300,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(25)
+            backgroundColor: Colors.pink,
+            title: Container(
+              height: 40,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(25)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 14),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.search_outlined,
+                      size: 25,
+                      color: Colors.grey[600],
                     ),
-                    child: Row(
-                      children: const [
-                        Icon(Icons.search_outlined,size: 30,),
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Search for restaurants,cuisines...'
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                    Text(
+                      "Search for shops and restaurants..",
+                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                    )
+                  ],
                 ),
-                Icon(Icons.stacked_line_chart,color: Colors.black,),
-              ],
+              ),
             ),
           ),
           SliverToBoxAdapter(
@@ -78,26 +99,65 @@ class Home extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.deepPurple,
-                  borderRadius: BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 height: 300,
                 width: 450,
-
+                child: Center(
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const First()));
+                      },
+                      icon: const Icon(
+                        Icons.arrow_forward_rounded,
+                        color: Colors.white,
+                        size: 50,
+                      )),
+                ),
               ),
             ),
           ),
-          SliverToBoxAdapter(
-            child: Container(
-              height: 300,
-              width: 450,
-              color: Colors.deepPurple,
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple, border: Border.all(width: 1)),
+                    child: const Text(
+                      "Sliver List",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                );
+              },
+              childCount: 5,
             ),
           ),
-          SliverToBoxAdapter(
-            child: Container(
-              height: 300,
-              width: 450,
-              color: Colors.deepPurple,
+          SliverGrid(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(5),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple, border: Border.all(width: 1)),
+                  child: const Center(
+                      child: Text(
+                    "Sliver Grid",
+                    style: TextStyle(color: Colors.white),
+                  )),
+                ),
+              );
+            }),
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 300,
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 5,
+              childAspectRatio: 4,
             ),
           ),
         ],
@@ -105,4 +165,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-

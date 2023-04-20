@@ -8,7 +8,7 @@ class Third extends StatefulWidget {
 }
 
 class _ThirdState extends State<Third>with SingleTickerProviderStateMixin{
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {
