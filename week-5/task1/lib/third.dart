@@ -30,6 +30,7 @@ class _ThirdState extends State<Third>with SingleTickerProviderStateMixin{
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RotationTransition(
                 alignment: Alignment.center,
