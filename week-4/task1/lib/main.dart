@@ -144,11 +144,9 @@ class _FavouriteWidgetState extends State<FavouriteWidget> {
           child: IconButton(
             padding: EdgeInsets.all(0),
             alignment: Alignment.centerRight,
-            icon: (_isFavourited
-                ? const Icon(Icons.star)
-                : const Icon(Icons.star_border)),
+            icon: (_isFavourited ? const Icon(Icons.star) : const Icon(Icons.star_border)),
             color: Colors.red[500],
-            onPressed: _toggleFavorite,
+            onPressed: _toggleFavorite
           ),
         ),
         SizedBox(

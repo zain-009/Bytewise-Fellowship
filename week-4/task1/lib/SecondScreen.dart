@@ -19,8 +19,20 @@ class _SecondScreenState extends State<SecondScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const TapBoxA(),
-              TapBoxB(onChanged: (bool value) {  },),
+              Column(
+                children: const [
+                  TapBoxA(),
+                  SizedBox(height: 10,),
+                  Text("State is managed by\nitself",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)
+                ],
+              ),
+              Column(
+                children: [
+                  TapBoxB(onChanged: (bool value) {  },),
+                  const SizedBox(height: 10,),
+                  const Text("State is managed by\na parent widget",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
+                ],
+              ),
             ],
           )
           
@@ -87,7 +99,7 @@ class _ParentWidgetState extends State<ParentWidget> {
 class TapBoxB extends StatelessWidget {
   const TapBoxB({
     super.key,
-    this.active = false,
+    this.active = true,
     required this.onChanged,
     });
     final bool active;
