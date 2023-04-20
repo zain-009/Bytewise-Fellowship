@@ -1,0 +1,3 @@
+In this week I learned:
+  -Adding Assets (Images) in our Flutter app using Image.asset and image.network from our assets and the internet through image link.
+  -Navigating from one screen to another using the Navigator.push and Navigator.pop.
