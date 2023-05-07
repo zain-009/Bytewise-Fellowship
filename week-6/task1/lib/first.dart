@@ -16,7 +16,7 @@ class _FirstState extends State<First> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("Gestures"),
+          title: const Text("Gestures."),
           actions: [
             IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const Second()));}, icon: const Icon(Icons.arrow_forward,size: 25,))
           ],
