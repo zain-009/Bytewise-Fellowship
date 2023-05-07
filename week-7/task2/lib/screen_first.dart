@@ -36,7 +36,7 @@ class First extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(width: 1)
                 ),
-                child: const Center(child: Text("Go Back to Home Screen"),),
+                child: const Center(child: Text("Go Back to HomeScreen"),),
               ),
             ),
           ],
