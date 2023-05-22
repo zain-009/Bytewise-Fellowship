@@ -1,0 +1,9 @@
+In this week I learned:
+	GetX State Management:
+		With GetX I made:
+		-A Counter App.
+		-Opacity Changer with slider Widget, notifications switch button.
+		-Cart to favourite food items that changes color of icon.
+		-Login form with GetX.
+	-Then i made a grocery app using state management
+	
