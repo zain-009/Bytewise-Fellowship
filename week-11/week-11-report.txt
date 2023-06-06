@@ -1,0 +1,4 @@
+In this week:
+	-I completed my finished my final task.
+	-Final task/project was an App Clone.
+	-I made an Instagram clone which uses Firebase.
